@@ -19,7 +19,8 @@ def Request(Url):
         Req = urllib.request.Request(url=Url,headers=Header)
         Resp = urllib.request.urlopen(Req,context=ctx,timeout=Argv.Timeout)
         if Resp.code != 404:
-            print(f"{Url} [{Resp.code}] [{re.findall(r'<title[^>]*>([^<]+)</title>', Resp.read().decode())[0]}]  [{len(Resp.read())}]")
+            Yakala = Resp.read().decode()
+            print(f"{Url} [{Resp.code}] [{re.findall(r'<title[^>]*>([^<]+)</title>', Yakala)[0]}]  [{len(Yakala)}]")
     except:
         pass
 
