@@ -8,6 +8,7 @@ python3 Prober.py -d Domains.txt -c 75
 # Advanced
 
 ```sh
+git clone https://github.com/Aporlorxl23/Domporlor && cd Domporlor
 python3 Domporlor.py -d hackerone.com -t 50 -cc | grep hackerone | cut -d " " -f 4 > hackerone.txt
 
 git clone https://github.com/Aporlorxl23/HTTP-Probe.git && cd HTTP-Probe
